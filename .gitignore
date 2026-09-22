@@ -1,0 +1,134 @@
+# =========================
+# CAFI-interface .gitignore
+# =========================
+
+# ---- OS / editor files ----
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ---- R ----
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# ---- Logs / temporary files ----
+*.log
+*.tmp
+*.temp
+*.bak
+tmp/
+temp/
+cache/
+
+# ---- Credentials / secrets ----
+.env
+.env.*
+!.env.example
+.Renviron
+.git-credentials
+.netrc
+.ssh/
+.aws/
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
+*.pem
+*.key
+*.p12
+*.pfx
+
+# ---- Local configuration that may contain paths or secrets ----
+config.local.*
+local_config.*
+secrets.*
+credentials.*
+
+# ---- Raw sequencing / alignment data ----
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bai
+*.sam
+*.cram
+*.crai
+*.vcf.gz
+*.bcf
+
+# ---- Large single-cell / spatial objects ----
+*.h5ad
+*.h5
+*.hdf5
+*.loom
+*.rds
+*.RDS
+*.rda
+*.RData
+
+# ---- Common large image / spatial files ----
+*.svs
+*.ndpi
+*.mrxs
+*.tif
+*.tiff
+*.ome.tif
+*.ome.tiff
+
+# ---- Archives ----
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.tgz
+
+# ---- Local data and generated outputs ----
+# Keep analysis code in GitHub; keep patient-level/raw/intermediate data outside.
+data/
+raw_data/
+processed_data/
+input/
+inputs/
+results/
+output/
+outputs/
+figures_generated/
+
+# ---- Clinical / metadata tables: do not upload by default ----
+# Remove a pattern below only if a specific de-identified public/example file
+# is intentionally required for reproducibility.
+*clinical*.csv
+*clinical*.tsv
+*clinical*.txt
+*patient*.csv
+*patient*.tsv
+*patient*.txt
+*metadata*.xlsx
+*metadata*.xls
+
+# ---- Office temporary files ----
+~$*.docx
+~$*.xlsx
+~$*.pptx
